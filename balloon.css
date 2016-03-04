@@ -1,6 +1,5 @@
 body {
-  background-color: lightyellow;
-
+  background-image: url("./images/sky.jpg");
 }
 
 #background {
@@ -19,47 +18,71 @@ body {
   height: auto;
 }
 
+.bird {
+left:100px;
+z-index:200;
+position:absolute;
+height:200px;
+width:200px;
+top:200px;
+}
+.bird1 {
+  right:80px;
+  z-index:200;
+  position:absolute;
+  height:200px;
+  width:200px;
+  left:900px;
+  top:100;
+}
+
+
 .color {
-  width:30%;
+  width:150px;
+  position:absolute;
   left:20px;
+  /*left:20vh;*/
 
 }
 .color1 {
-  width:30%;
+  width:20vw;
   /*display:flex;*/
-  position: relative;
-  float:right;
-  bottom:180px;
-
+  position:absolute;
+  float:left;
+  /*bottom:180px;*/
+  top:50px;
+  left: 1000px;
 
 }
 
 .color2 {
-  width:30%;
-  position: relative;
-  float:right;
-
+  width:550px;
+  position:absolute;
+  float:left;
+  left:400px;
+  top:200px;
 
 }
 
 .color3{
   position:absolute;
-  bottom:55px;
-  left:20px;
+  right:130vh;
+  /*left:20vw;*/
+  bottom:35px;
   text-align: center;
 }
-.color4{
+.color4 {
+  width: 35vw;
+  height: auto;
   position:absolute;
-  right:1000px;
-  left:1000px;
-  bottom:55px;
+  left: 75vw;
+  top: 60vh;
 }
 
-/*.color {
+img {
+  width: 50%;
+}
 
-  -webkit-transform:rotate(100px) rotate(20deg);
-  -webkit-transform-origin: 0 -250px;
-
-  transform: rotate()(100px) rotate(20deg);
-  transform-origin: 0 -250px;
-}*/
+#opener {
+  text-align:center;
+}
