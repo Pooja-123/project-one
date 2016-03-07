@@ -1,4 +1,15 @@
 
+// var C = 10;
+// setTimeout(function (){
+//   // alert("Game over");
+//   if (C >= 10){
+//     alert("you win");
+//   }else {
+//     ('Game Over');
+//     }
+// }, 9000);
+
+
 var yellow = document.querySelector('.color');
 var orange = document.querySelector('.color1');
 var green= document.querySelector('.color2');
@@ -6,7 +17,9 @@ var darkgreen=document.querySelector('.color3');
 var lightgreen=document.querySelector('.color4');
 var button=document.querySelector('.btn');
 var popCount = 0;
-
+var newSky = document.createElement('div');
+newSky.id = "newbackground";
+newSky.innerHTML = "<img src='images/sky.jpg' width='100%' height='100%'>";
 
 // var opener = document.createElement('div');
 // opener.id = "opener";
@@ -15,6 +28,18 @@ var popCount = 0;
 // setTimeout(function() {
 //   opener.remove();
 // }, 1000);
+
+setTimeout(function(){
+  var gameOver = true;
+  alert("Game over");
+  yellow.remove();
+  orange.remove();
+  green.remove();
+  darkgreen.remove();
+  lightgreen.remove();
+  button.remove();
+  document.body.appendChild(newSky);
+}, 10000);
 
 yellow.addEventListener('click', function(){
   alert("You Clicked Me!");
