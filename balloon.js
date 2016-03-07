@@ -1,5 +1,4 @@
 
-
 var yellow = document.querySelector('.color');
 var orange = document.querySelector('.color1');
 var green= document.querySelector('.color2');
@@ -26,15 +25,19 @@ yellow.addEventListener('click', function(){
   }, 1000);
   addBalloon();
 });
-orange.addEventListener('click',function(){
-  alert("Hoorah You Choose Me!");
-  popCount +=1;
-  orange.innerHTML="<img src='images/blue-balloon-hi.png', height='150px'width='100px'>";
-  setTimeout(function () {
-    orange.innerHTML="";
-  }, 1000);
-  addBalloon();
-});
+
+
+  orange.addEventListener('click',function(){
+    alert("Hoorah");
+    orange.innerHTML="<img src='images/margenta.png'>";
+    setTimeout(function (){
+      orange.remove();
+    },1000);
+    addBalloon();
+  });
+
+
+
   green.addEventListener('click',function(){
     alert("yeah!");
     green.innerHTML="<img src='images/popped.png', height='150px' width='150px'>";
@@ -42,7 +45,7 @@ orange.addEventListener('click',function(){
       green.innerHTML="";
     }, 1000);
     addBalloon();
-popCount +=1;
+// popCount +=1;
 var audio = new Audio('http://soundbible.com/grab.php?id=1522&type=mp3');
     audio.play();
 });
@@ -76,7 +79,7 @@ button.addEventListener('click',function(){
     alert("clicked");
   var opener = document.createElement('div');
   opener.id = "opener";
-  opener.innerText = "Pop as many balloons as you can I willchanged the color!";
+  opener.innerText = "Pop as many balloons as you can I add more balloons!";
   document.body.appendChild(opener);
   setTimeout(function() {
     opener.remove();
@@ -141,54 +144,3 @@ function addBalloon () {
   document.body.appendChild(newBalloon);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var balloons = document.querySelectorAll('.balloon');
-// for (var i = 0; i < balloons.length; i++) {
-//   balloons[i].style.left=left + "px";
-// }
-//
-// // var bottom = 0;
-// // var movement = "right";
-// // var upDown = "up";
-// var rand = Math.round(Math.random() * 13 + 2);
-// var balloons = setInterval(function(){
-//  balloons.style.left = left + "px";
-//  if(movement == "right"){
-//   balloons.style.height = '500px';
-//   balloons.style.width = '500px';
-//   balloons.style.transitionDuration = "1s";
-//   if (left <= window.innerWidth - 300)
-//    {   left += rand;    }
-//  else {  movement = "left";
-//  balloons.style.height = '150px';
-//  balloons.style.width = '150px';
-//  balloons.style.transitionDuration = "1s";
-//  balloons.className = "left";       }
-// } else {
-//   if (left >= 0)
-//    {     left -= rand;
-//    } else {
-//     movement = "right";
-//     balloons.className = "right";}}},20);
-// var walkRight = setInterval(function(){
-//  balloons.style.bottom = bottom + "px";
-//  if(upDown == "up"){
-//    if (bottom <= window.innerHeight - 250){
-//      bottom += 10;
-//    } else { upDown = "down"; }
-//  } else {
-//    if (bottom >= 0){
-//      bottom -= 10;
-//    } else {  upDown = "up";}}},20);
