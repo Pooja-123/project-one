@@ -19,7 +19,7 @@ var button=document.querySelector('.btn');
 var popCount = 0;
 var newSky = document.createElement('div');
 newSky.id = "newbackground";
-newSky.innerHTML = "<img src='images/sky.jpg' width='100%' height='100%'>";
+newSky.innerHTML = "<img src='./images/sky.jpg' width='100%' height='100%' class='stretch'>";
 
 // var opener = document.createElement('div');
 // opener.id = "opener";
@@ -31,6 +31,7 @@ newSky.innerHTML = "<img src='images/sky.jpg' width='100%' height='100%'>";
 
 setTimeout(function(){
   var gameOver = true;
+  document.body.appendChild(newSky);
   alert("Game over");
   yellow.remove();
   orange.remove();
@@ -38,7 +39,6 @@ setTimeout(function(){
   darkgreen.remove();
   lightgreen.remove();
   button.remove();
-  document.body.appendChild(newSky);
 }, 10000);
 
 yellow.addEventListener('click', function(){
