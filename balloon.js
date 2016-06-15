@@ -39,11 +39,10 @@ setTimeout(function(){
   darkgreen.remove();
   lightgreen.remove();
   button.remove();
-}, 10000);
+}, 60000);
 
 yellow.addEventListener('click', function(){
   alert("You Clicked Me!");
-  popCount +=1;
   yellow.innerHTML="<img src='images/balloon-md.png', height='150px' width= '100px'>";
   setTimeout(function () {
     yellow.innerHTML="";
@@ -57,7 +56,7 @@ yellow.addEventListener('click', function(){
     orange.innerHTML="<img src='images/margenta.png'>";
     setTimeout(function (){
       orange.remove();
-    },1000);
+    },5000);
     addBalloon();
   });
 
@@ -88,7 +87,6 @@ darkgreen.addEventListener('click',function() {
     darkgreen.innerHTML="";
   }, 1000);
   addBalloon();
-  popCount +=1;
 });
 
 lightgreen.addEventListener('click',function() {
@@ -98,7 +96,6 @@ lightgreen.addEventListener('click',function() {
     lightgreen.remove();
   },1000);
   addBalloon();
-  popCount +=1;
 });
 button.addEventListener('click',function(){
     alert("clicked");
@@ -108,8 +105,7 @@ button.addEventListener('click',function(){
   document.body.appendChild(opener);
   setTimeout(function() {
     opener.remove();
-  }, 2000);
-  popCount +=1;
+  }, 1000);
 });
 
 
@@ -118,6 +114,15 @@ function addBalloon () {
 
   var newBalloon = document.createElement('div');
   var colorChoice = possibleColors[Math.floor(Math.random() * possibleColors.length)];
+
+//popcount timer
+
+  popCount +=1;
+  if (popCount === 10) {
+    var gameOver = true;
+    document.body.appendChild(newSky);
+    alert("You win");
+  }
 
   newBalloon.classList.add(colorChoice);
   if (colorChoice == possibleColors[0]) {
